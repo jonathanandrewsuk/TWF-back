@@ -6,11 +6,11 @@ Made using the lovely open developer API from [Giphy](https://giphy.com/)
 
 ## Front End Client
 
-###Make a phrase:
+### Make a phrase:
 
 ![Three Word Fraiser](http://preview.ibb.co/bYG0nk/Screen_Shot_2017_06_27_at_11_40_15.png)
 
-###Send them to your friends/enemies:
+### Send them to your friends/enemies:
 
 ![Three Word Fraiser](http://preview.ibb.co/meZmSk/Screen_Shot_2017_06_27_at_11_40_26.png)
 
