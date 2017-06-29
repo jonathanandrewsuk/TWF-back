@@ -7,12 +7,12 @@ class Api::V1::PhrasesController < ApplicationController
 
   def create
     phrase = Phrase.create(phrase_params)
+    render json: phrase
   end
 
   def show
 
-
-  phrase = Phrase.find_by(params[:hash_token])
+  phrase = Phrase.find(params["id"])
   render json: phrase
 
   end
