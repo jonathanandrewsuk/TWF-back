@@ -17,8 +17,13 @@ ActiveRecord::Schema.define(version: 20170626205320) do
 
   create_table "phrases", force: :cascade do |t|
     t.integer "user_id"
-    t.text "words", default: [], array: true
-    t.text "hash_token"
+    t.string "gif_1"
+    t.string "term_1"
+    t.string "gif_2"
+    t.string "term_2"
+    t.string "gif_3"
+    t.string "term_3"
+    t.string "hash_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
