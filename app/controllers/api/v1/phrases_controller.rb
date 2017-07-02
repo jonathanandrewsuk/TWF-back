@@ -12,7 +12,7 @@ class Api::V1::PhrasesController < ApplicationController
 
   def show
 
-  phrase = Phrase.find(params["id"])
+  phrase = Phrase.all[0]
   render json: phrase
 
   end
