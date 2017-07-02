@@ -11,10 +11,8 @@ class Api::V1::PhrasesController < ApplicationController
   end
 
   def show
-
-  phrase = Phrase.all[0]
+  phrase = Phrase.find_by(hash_token: params["id"])
   render json: phrase
-
   end
 
 
