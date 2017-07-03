@@ -17,12 +17,6 @@ ActiveRecord::Schema.define(version: 20170626205320) do
 
   create_table "phrases", force: :cascade do |t|
     t.integer "user_id"
-    t.string "gif_1"
-    t.string "term_1"
-    t.string "gif_2"
-    t.string "term_2"
-    t.string "gif_3"
-    t.string "term_3"
     t.string "hash_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -34,8 +28,11 @@ ActiveRecord::Schema.define(version: 20170626205320) do
   end
 
   create_table "words", force: :cascade do |t|
-    t.string "string"
+    t.string "phrase_id"
+    t.string "text"
     t.string "gif_id"
+    t.string "text_theme"
+    t.string "gif_theme"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -6,7 +6,10 @@ class Api::V1::PhrasesController < ApplicationController
   end
 
   def create
-    phrase = Phrase.create(phrase_params)
+    phrase =  Phrase.create(user_id:params[:phrase][:user_id])
+    words = params[:phrase][:words].map do |word_params|
+      Word.create(text:word_params[:text],phrase_id:phrase.id,gif_id:word_params[:gif_id],text_theme:word_params[:text_theme],gif_theme:word_params[:gif_theme])
+    end
     render json: phrase
   end
 
@@ -20,7 +23,7 @@ class Api::V1::PhrasesController < ApplicationController
   private
 
     def phrase_params
-      params.require(:phrase).permit(:user_id, :gif_1, :term_1, :gif_2, :term_2,:gif_3, :term_3)
+      params.require(:phrase).permit(:user_id)
     end
 
 
