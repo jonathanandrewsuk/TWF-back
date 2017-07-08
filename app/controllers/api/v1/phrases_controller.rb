@@ -6,6 +6,7 @@ class Api::V1::PhrasesController < ApplicationController
   end
 
   def create
+
     phrase =  Phrase.create(user_id:params[:phrase][:user_id])
     words = params[:phrase][:words].map do |word_params|
       Word.create(text:word_params[:text],phrase_id:phrase.id,gif_id:word_params[:gif_id],text_theme:word_params[:text_theme],gif_theme:word_params[:gif_theme])

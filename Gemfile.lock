@@ -49,6 +49,7 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.0.5)
+    connection_pool (2.2.1)
     erubi (1.6.0)
     ffi (1.9.18)
     globalid (0.4.0)
@@ -69,6 +70,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    net-http-persistent (3.0.0)
+      connection_pool (~> 2.2)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -134,6 +137,7 @@ DEPENDENCIES
   active_model_serializers
   byebug
   listen (>= 3.0.5, < 3.2)
+  net-http-persistent
   pg (~> 0.18)
   puma (~> 3.7)
   rack-cors
