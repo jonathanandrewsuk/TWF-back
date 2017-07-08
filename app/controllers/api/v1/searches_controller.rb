@@ -5,9 +5,11 @@ class Api::V1::SearchesController < ApplicationController
   end
 
   def show
+    api_key = ENV['GIPHY_API_KEY']
     word = params["id"]
 
-    url = URI("http://api.giphy.com/v1/gifs/search?q=#{word}&api_key=something")
+    url = URI("http://api.giphy.com/v1/gifs/search?q=#{word}&api_key=#{api_key}")
+
     http = Net::HTTP.new(url.host, url.port)
     request = Net::HTTP::Get.new(url)
     request["authorization"] = 'Token 2f9a56d5e1bbd1c3e695e8291949b11b5aa23b66'
